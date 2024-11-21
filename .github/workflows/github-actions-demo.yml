@@ -9,7 +9,7 @@ on:
     branches: [main]
 
 jobs:
-  main:
+  Explore-GitHub-Actions:
     strategy:
       matrix:
         node: [18, 20]
