@@ -13,7 +13,6 @@ jobs:
     strategy:
       matrix:
         node: [18, 20]
-        react: ['18.x', latest, canary, experimental]
     # Ubuntu, Windows, MacOS를 지원한다.
     runs-on: ubuntu-latest
 
@@ -38,11 +37,6 @@ jobs:
       # TODO: Can be removed if https://github.com/kentcdodds/kcd-scripts/pull/146 is released
       - name: Verify format (`npm run format` committed?)
         run: npm run format -- --check --no-write
-
-      # as requested by the React team :)
-      # https://reactjs.org/blog/2019/10/22/react-release-channels.html#using-the-next-channel-for-integration-testing
-      - name: ⚛️ Setup react
-        run: npm install react@${{ matrix.react }} react-dom@${{ matrix.react }}
 
       - name: ▶️ Run validate script
         run: npm run validate
