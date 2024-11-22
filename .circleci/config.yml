@@ -9,11 +9,27 @@ executors:
   node-executor:
     docker:
       - image: cypress/base:18.17.0 # Node.js 버전을 18.17.0 이상으로 설정
+jobs:
+  build_and_test:
+    executor: node-executor
+    steps:
+      - checkout
+      - run:
+          name: Install Dependencies
+          command: npm install
+      - run:
+          name: Build Project
+          command: npm run build
+      - run:
+          name: Start Server
+          command: npm run start &
+      - run:
+          name: Wait for Server
+          command: npx wait-on http://localhost:3000
+      - cypress/run:
+          start: npm run start
+          wait-on: http://localhost:3000
 workflows:
   build:
     jobs:
-      - cypress/run:
-          executor: node-executor # 위에서 정의한 executor 사용
-          start-command: 'npm run start' # 프로덕션 빌드로 서버 시작
-          wait-on: http://localhost:3000 # 서버가 시작될 때까지 Cypress가 기다리도록 설정
-          command: npx wait-on http://localhost:3000 && npx cypress run # 서버 실행 후 Cypress 테스트 실행
+      - build_and_test
