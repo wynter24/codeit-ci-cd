@@ -4,32 +4,20 @@ orbs:
   # version "s.x.y" of the orb. We recommend you then use
   # the strict explicit version "cypress-io/cypress@3.x.y"
   # to lock the version and prevent unexpected CI changes
-  cypress: cypress-io/cypress@3
-executors:
-  node-executor:
-    docker:
-      - image: cypress/base:18.17.0 # Node.js 버전을 18.17.0 이상으로 설정
+  cypress: cypress-io/cypress@3.3.1
+
 jobs:
-  build_and_test:
-    executor: node-executor
+  cypress-run:
+    executor:
+      name: cypress/default
+      node-version: '20.6.0'
     steps:
-      - checkout
-      - run:
-          name: Install Dependencies
-          command: npm install
-      - run:
-          name: Build Project
-          command: npm run build
-      - run:
-          name: Start Server
-          command: npm run start &
-      - run:
-          name: Wait for Server
-          command: npx wait-on http://localhost:3000
-      - cypress/run:
-          start: npm run start
-          wait-on: http://localhost:3000
+      - cypress/install
+      - cypress/run-tests:
+          cypress-command: 'npx wait-on@latest http://localhost:3000 && npx cypress run'
+          start-command: 'npm run build && npm run start'
+
 workflows:
   build:
     jobs:
-      - build_and_test
+      - cypress-run
