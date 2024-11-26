@@ -15,7 +15,7 @@ body:
   - type: textarea
     id: test_scenario
     attributes:
-      label: '테스트 시나리오'
+      label: '🧪 테스트 시나리오'
       description: '테스트할 시나리오를 단계별로 작성해주세요.'
       placeholder: |
         예:
@@ -28,7 +28,7 @@ body:
   - type: textarea
     id: expected_result
     attributes:
-      label: '예상 결과'
+      label: '👓 예상 결과'
       description: '테스트 시나리오에 따른 예상 결과를 작성해주세요.'
       placeholder: '예: 사용자 대시보드로 이동해야 합니다.'
     validations:
@@ -37,6 +37,6 @@ body:
   - type: textarea
     id: actual_result
     attributes:
-      label: '실제 결과'
+      label: '🖥️ 실제 결과'
       description: '테스트 실행 후 실제 결과를 작성해주세요.'
       placeholder: '실제 결과를 입력해주세요.'

@@ -38,5 +38,5 @@ body:
       description: "코드 첨부시, VS Code 캡쳐본과 함께 해당 코드를 복사해서 올려주세요. \n 에러메시지가 있는 경우, 에러메시지 캡쳐본과 함께 에러메시지를 복사해서 올려주세요"
   - type: textarea
     attributes:
-      label: 🙋🏻 참고 자료 (선택 사항)
+      label: 🙋🏻 참고 자료
       description: 이미지, 동영상, 참고 링크
