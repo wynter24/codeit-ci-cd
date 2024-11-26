@@ -9,6 +9,7 @@ body:
       label: '📄 테스트 개요'
       description: '테스트할 기능에 대한 간략한 설명을 작성해주세요.'
       placeholder: '예: 로그인 기능 테스트'
+    validations:
       required: true
 
   - type: textarea
@@ -21,6 +22,7 @@ body:
           1. 로그인 페이지로 이동
           2. 유효한 사용자 정보 입력
           3. 로그인 버튼 클릭
+    validations:
       required: true
 
   - type: textarea
@@ -29,6 +31,7 @@ body:
       label: '예상 결과'
       description: '테스트 시나리오에 따른 예상 결과를 작성해주세요.'
       placeholder: '예: 사용자 대시보드로 이동해야 합니다.'
+    validations:
       required: true
 
   - type: textarea

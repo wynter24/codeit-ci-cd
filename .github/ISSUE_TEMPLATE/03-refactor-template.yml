@@ -10,6 +10,7 @@ body:
       label: '📄 리팩터링 개요'
       description: '리팩터링의 목표나 이유를 간략하게 작성해주세요.'
       placeholder: '예: 중복 코드 제거, 성능 최적화'
+    validations:
       required: true
 
   - type: textarea
@@ -21,6 +22,7 @@ body:
         예:
           - 함수 분리로 코드 재사용성 향상
           - 불필요한 변수 제거
+    validations:
       required: true
 
   - type: textarea
