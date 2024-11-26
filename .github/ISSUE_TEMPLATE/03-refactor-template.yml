@@ -1,6 +1,6 @@
 name: '♻️ REFACTOR'
 description: '코드 리팩터링 기록 템플릿'
-title: '♻️ 제목 #관련 작업 이슈 번호'
+title: '♻️ [Refactor] #관련 작업 이슈 번호'
 labels: ['♻️ Refactor']
 
 body:

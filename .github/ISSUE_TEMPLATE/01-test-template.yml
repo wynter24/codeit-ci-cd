@@ -1,6 +1,6 @@
 name: '✅ TEST'
 description: '테스트 케이스 작성 템플릿'
-title: '[✅ Test] 제목'
+title: '✅ [Test] 제목'
 labels: ['✅ Test']
 body:
   - type: input
