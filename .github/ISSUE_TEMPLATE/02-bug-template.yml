@@ -21,22 +21,22 @@ body:
 
   - type: textarea
     attributes:
-      label: 문제상황
+      label: 📄 문제상황
       description: 문제 상황을 상세하게 작성해주세요.
     validations:
       required: true
   - type: checkboxes
     attributes:
-      label: 재현 가능 여부
+      label: ✔️ 재현 가능 여부
       description: 확인한 버그 상황을 재현 가능한지 여부를 체크해주세요.
       options:
         - label: '예'
         - label: '아니오'
   - type: textarea
     attributes:
-      label: 코드
+      label: 💻 코드
       description: "코드 첨부시, VS Code 캡쳐본과 함께 해당 코드를 복사해서 올려주세요. \n 에러메시지가 있는 경우, 에러메시지 캡쳐본과 함께 에러메시지를 복사해서 올려주세요"
   - type: textarea
     attributes:
-      label: 기타 (선택 사항)
+      label: 🙋🏻 참고 자료 (선택 사항)
       description: 이미지, 동영상, 참고 링크
